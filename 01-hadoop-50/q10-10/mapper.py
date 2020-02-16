@@ -10,3 +10,6 @@ for line in sys.stdin:
     for i in b.split(","):
         print(i + "\t" + a)
 
+
+
+

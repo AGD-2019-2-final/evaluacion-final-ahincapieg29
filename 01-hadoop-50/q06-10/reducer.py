@@ -24,3 +24,4 @@ if __name__ == '__main__':
         print(last + '\t' + str(maxi) + '\t' + str(mini))
 
     
+

@@ -26,3 +26,7 @@ for line in sys.stdin:
 suma = sum(lista)
 promedio = suma / float(len(lista))
 print(letra + '\t' + str(suma)+  '\t' + str(promedio))
+
+
+
+

@@ -12,3 +12,5 @@ if __name__ == "__main__":
 		num = splits[2]                
 		b = (letra + '\t' + fecha + '\t' + num)
 		print(b)  
+
+

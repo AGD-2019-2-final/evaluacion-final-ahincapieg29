@@ -19,3 +19,5 @@ if __name__ == '__main__':
             total = val
 
     sys.stdout.write("{}\t{}\n".format(curkey, total))
+
+

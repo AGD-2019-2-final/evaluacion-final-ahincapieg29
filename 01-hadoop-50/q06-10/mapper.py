@@ -11,3 +11,5 @@ if __name__ == "__main__":
 		valor = splits[2]
 		b = (letra + '\t' + valor)
 		print(b)   
+
+

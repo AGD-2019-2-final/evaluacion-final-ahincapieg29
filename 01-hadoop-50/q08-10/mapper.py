@@ -12,3 +12,5 @@ if __name__ == "__main__":
                 
 		b = (letra + '\t' + valor)
 		print(b)   
+
+

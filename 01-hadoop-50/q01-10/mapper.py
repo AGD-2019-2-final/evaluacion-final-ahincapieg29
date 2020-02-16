@@ -7,4 +7,5 @@ if __name__ == "__main__":
 		credit = splits[2]
 		b = (credit + '\t1')
 		print(b)        
-        
+
+

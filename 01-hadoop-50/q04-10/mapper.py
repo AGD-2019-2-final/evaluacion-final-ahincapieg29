@@ -6,3 +6,5 @@ if __name__ == "__main__":
         splits = line.split("   ")
         b = splits[0]
         print(b + '\t1')
+
+

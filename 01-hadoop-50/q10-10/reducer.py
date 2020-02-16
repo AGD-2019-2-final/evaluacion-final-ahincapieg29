@@ -18,3 +18,4 @@ nums.sort()
 print(currentkey + "\t" + str(nums).replace("[", "").replace("]", "").replace(" ", ""))
 
 
+

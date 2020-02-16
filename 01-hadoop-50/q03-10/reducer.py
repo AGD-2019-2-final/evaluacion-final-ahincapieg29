@@ -15,3 +15,5 @@ if __name__ == '__main__':
     
     for i in list:
         print(i[0] + ',' + str(i[1]))
+
+

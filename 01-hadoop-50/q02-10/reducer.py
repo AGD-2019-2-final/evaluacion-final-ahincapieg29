@@ -19,4 +19,4 @@ if __name__ == '__main__':
     if last:
         print(last + '\t' + str(maxi))
 
-    
+ 

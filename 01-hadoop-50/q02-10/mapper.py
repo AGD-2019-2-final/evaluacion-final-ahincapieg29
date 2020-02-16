@@ -10,3 +10,5 @@ if __name__ == "__main__":
 		amount = splits[4]
 		b = (purpose + '\t' + amount)
 		print(b)   
+
+

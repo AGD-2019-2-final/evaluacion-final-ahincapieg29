@@ -17,3 +17,5 @@ if __name__ == '__main__':
     for i in lista:
         if i[2] < 8:
             print(i[0] + ' ' + str(i[1]) + ' ' + str(i[2]))
+
+
