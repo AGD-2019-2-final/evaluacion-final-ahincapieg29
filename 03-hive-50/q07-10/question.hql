@@ -45,3 +45,5 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 SELECT  c2,concat_ws(':',collect_set(CAST(c1 AS STRING)))
     FROM tbl0
 GROUP BY c2;
+
+

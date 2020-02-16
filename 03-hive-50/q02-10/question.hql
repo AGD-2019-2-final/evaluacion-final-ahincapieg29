@@ -29,3 +29,4 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
     FROM data
 ORDER BY
     letra,Num,Fecha);
+

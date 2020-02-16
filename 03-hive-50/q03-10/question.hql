@@ -29,3 +29,4 @@ INSERT OVERWRITE LOCAL DIRECTORY 'output'
     FROM data
 ORDER BY
     Num LIMIT 5);
+

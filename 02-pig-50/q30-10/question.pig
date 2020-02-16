@@ -40,13 +40,7 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
-%load_ext bigdata
-%pig_start
-%timeout 300
-%%pig
 fs -put data.csv
-
-%%pig
 u = LOAD 'data.csv' USING PigStorage(',') 
     AS (id:int, 
         firstname:CHARARRAY, 
@@ -56,9 +50,6 @@ u = LOAD 'data.csv' USING PigStorage(',')
         quantity:INT);
     
 r = FOREACH u GENERATE $3;
-DUMP r;
-
-%%pig
 a = FOREACH r GENERATE $0, SUBSTRING($0, 8, 10), GetDay(ToDate($0, 'yyyy-MM-dd')), 
 CASE ToString(ToDate($0, 'yyyy-MM-dd'), 'EEE') 
     WHEN 'Mon' THEN 'lun'
@@ -78,17 +69,10 @@ CASE ToString(ToDate($0, 'yyyy-MM-dd'), 'EEE')
     WHEN 'Sat' THEN 'sabado'
     WHEN 'Sun' THEN 'domingo'
     END; 
-DUMP a;
-
-%%pig
 STORE a INTO 'output' USING PigStorage(',');
-
-%%pig
 fs -get output/ .
 
 !hadoop fs -ls output/*
 
 !hadoop fs -cat output/part-m-00000
-
-%pig_quit
 

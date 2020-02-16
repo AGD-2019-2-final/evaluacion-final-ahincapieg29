@@ -34,7 +34,6 @@ timeout 300
 %%pig
 fs -put data.csv
 
-%%pig
 --
 -- Carga el archivo desde el disco duro
 --
@@ -43,19 +42,15 @@ u = LOAD 'data.csv' USING PigStorage(',')
 r= FOREACH u GENERATE $1, $2;
 DUMP r;
 
-%%pig
 z= FOREACH r GENERATE CONCAT ($0,'@',$1);
 DUMP z;
 
-%%pig
 STORE z INTO 'output';
 
-%%pig
 fs -get output/ .
 
 !hadoop fs -ls output/*
 
 !hadoop fs -cat output/part-m-00000
 
-%pig_quit
 

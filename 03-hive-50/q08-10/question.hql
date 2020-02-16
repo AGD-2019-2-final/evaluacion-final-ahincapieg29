@@ -47,3 +47,4 @@ SELECT c2,sum(val)
 lateral view explode(c6) c0 as key,val
 GROUP BY c2;
 
+

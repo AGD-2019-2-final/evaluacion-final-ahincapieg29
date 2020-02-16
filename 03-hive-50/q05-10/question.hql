@@ -46,3 +46,4 @@ SELECT YEAR(c4) as year,c0,count(c0)
 LATERAL VIEW
     explode(c5) tbl0 AS c0
 GROUP BY YEAR(c4),c0;
+

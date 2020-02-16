@@ -26,6 +26,7 @@ LOAD DATA LOCAL INPATH 'data.tsv' INTO TABLE t0;
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+
 INSERT OVERWRITE LOCAL DIRECTORY 'output'
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 (SELECT
@@ -39,4 +40,5 @@ FROM (
     LATERAL VIEW
      explode(c2) m as c0
 GROUP BY c0,key);
+
 

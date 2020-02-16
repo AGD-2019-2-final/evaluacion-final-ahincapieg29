@@ -45,4 +45,3 @@ SELECT DISTINCT c0
 LATERAL VIEW
     explode(c5) tbl0 AS c0;
     
-    
