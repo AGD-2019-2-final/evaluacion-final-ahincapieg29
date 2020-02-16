@@ -1,5 +1,11 @@
 import sys
-#
-# >>> Escriba el codigo del mapper a partir de este punto <<<
-#
-        
+
+for line in sys.stdin:
+    a = ""
+    b = ""
+    line = line.strip()
+    splits = line.split("\t")
+    a = splits[0]
+    b = splits[1]
+    for i in b.split(","):
+        print(i + "\t" + a)
