@@ -1,18 +1,20 @@
 import sys
 
-currentk = None
+currentkey = None
 nums = []
 
 for line in sys.stdin:
-    k, v = line.split("\t")
-    v = int(v)
-    if k == currentk:
-        nums.append(v)
+    key, value = line.split("\t")
+    value = int(value)
+    if key == currentkey:
+        nums.append(value)
     else:
-        if currentk is not None:
+        if currentkey is not None:
             nums.sort()
-            print(currentk + "\t" + str(nums).replace("[", "").replace("]", "").replace(" ", ""))
-        currentk = k
-        nums = [v]
+            print(currentkey + "\t" + str(nums).replace("[", "").replace("]", "").replace(" ", ""))
+        currentkey = key
+        nums = [value]
 nums.sort()
-print(currentk + "\t" + str(nums).replace("[", "").replace("]", "").replace(" ", ""))
+print(currentkey + "\t" + str(nums).replace("[", "").replace("]", "").replace(" ", ""))
+
+

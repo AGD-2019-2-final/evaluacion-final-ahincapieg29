@@ -9,3 +9,4 @@ for line in sys.stdin:
     b = splits[1]
     for i in b.split(","):
         print(i + "\t" + a)
+
