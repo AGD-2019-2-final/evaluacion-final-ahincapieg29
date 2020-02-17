@@ -31,7 +31,7 @@ u = LOAD 'data.csv' USING PigStorage(',')
     
 r = FOREACH u GENERATE $3;
 v = FOREACH r GENERATE GetYear(ToDate($0, 'yyyy-MM-dd'));
-y = ORDER v BY $0;%%pig
+y = ORDER v BY $0;
 z = GROUP y BY $0;
 wordcount = FOREACH z GENERATE group, COUNT(y);
 STORE wordcount INTO 'output' USING PigStorage(',');
